@@ -1,13 +1,13 @@
-package com.kudelich.bsu.entities.database
+package com.kudelich.bsu.classes.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "groups_table")
-data class Group(
+@Entity(tableName = "users_table")
+data class User(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
-    val number: Int,
     val name: String,
-    val courseId: Int
+    val surname: String,
+    val groupId: Int
 )

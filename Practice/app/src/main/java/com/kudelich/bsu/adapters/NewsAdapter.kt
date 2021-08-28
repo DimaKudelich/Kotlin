@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kudelich.bsu.R
-import com.kudelich.bsu.entities.News
+import com.kudelich.bsu.classes.News
 import kotlinx.android.synthetic.main.card_news.view.*
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsHolder>() {

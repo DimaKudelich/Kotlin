@@ -5,7 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.kudelich.bsu.entities.database.Faculty
+import com.kudelich.bsu.classes.entities.Faculty
 
 @Dao
 interface FacultyDao {

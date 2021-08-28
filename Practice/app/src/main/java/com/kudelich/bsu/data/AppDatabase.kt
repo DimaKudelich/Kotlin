@@ -9,7 +9,7 @@ import com.kudelich.bsu.data.dao.ClassDao
 import com.kudelich.bsu.data.dao.CourseDao
 import com.kudelich.bsu.data.dao.FacultyDao
 import com.kudelich.bsu.data.dao.GroupDao
-import com.kudelich.bsu.entities.database.*
+import com.kudelich.bsu.classes.entities.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

@@ -23,11 +23,13 @@ class MyScheduleFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_my_schedule, container, false)
-    }
+        val view  = inflater.inflate(R.layout.fragment_my_schedule, container, false)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+
+        mClassViewModel = ViewModelProvider(this).get(ClassViewModel::class.java)
+        mClassViewModel.readAllData.observe(viewLifecycleOwner, Observer { classes ->
+            adapter.setData(classes)
+        })
 
         view.swiperefresh.setOnRefreshListener {
             view.swiperefresh.isRefreshing = true
@@ -36,8 +38,10 @@ class MyScheduleFragment : Fragment() {
 
             view.swiperefresh.isRefreshing = false
         }
-        
+
         init()
+
+        return view
     }
 
     companion object {
@@ -51,10 +55,6 @@ class MyScheduleFragment : Fragment() {
             rcView.layoutManager = LinearLayoutManager(this.context)
             rcView.adapter = adapter
 
-            mClassViewModel = ViewModelProvider(this).get(ClassViewModel::class.java)
-            mClassViewModel.readAllData.observe(viewLifecycleOwner, Observer { classes ->
-                adapter.setData(classes)
-            })
         }
     }
 

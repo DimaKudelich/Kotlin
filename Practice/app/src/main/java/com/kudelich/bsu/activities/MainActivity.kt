@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.kudelich.bsu.R
 import com.kudelich.bsu.data.viewmodel.ClassViewModel
 import com.kudelich.bsu.databinding.ActivityMainBinding
-import com.kudelich.bsu.entities.database.Class
+import com.kudelich.bsu.classes.entities.Class
 import com.kudelich.bsu.fragments.MyScheduleFragment
 import com.kudelich.bsu.fragments.NewsFragment
 import com.kudelich.bsu.fragments.ProfileFragment

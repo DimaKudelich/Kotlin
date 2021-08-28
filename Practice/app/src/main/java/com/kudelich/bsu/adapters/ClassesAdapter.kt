@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kudelich.bsu.R
-import com.kudelich.bsu.entities.database.Class
+import com.kudelich.bsu.classes.entities.Class
 import kotlinx.android.synthetic.main.card_classes.view.*
 
 class ClassesAdapter : RecyclerView.Adapter<ClassesAdapter.ClassesHolder>() {

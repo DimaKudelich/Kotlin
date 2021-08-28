@@ -5,15 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kudelich.bsu.R
-import com.kudelich.bsu.entities.database.Faculty
 import kotlinx.android.synthetic.main.card_search.view.*
 
 class SearchAdapter: RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
-    private var searches = emptyList<Faculty>()
+    private var searches = emptyList<String>()
 
     class SearchHolder(item: View) : RecyclerView.ViewHolder(item) {
-        fun bind(search: Faculty) {
-            itemView.search_data.text = search.name
+        fun bind(search: String) {
+            itemView.search_data.text = search
         }
     }
 
@@ -33,7 +32,7 @@ class SearchAdapter: RecyclerView.Adapter<SearchAdapter.SearchHolder>() {
         return searches.size
     }
 
-    fun setData(searches: List<Faculty>){
+    fun setData(searches: List<String>){
         this.searches = searches
         notifyDataSetChanged()
     }

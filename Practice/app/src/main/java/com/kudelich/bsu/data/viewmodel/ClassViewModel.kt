@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.kudelich.bsu.data.AppDatabase
 import com.kudelich.bsu.data.repository.ClassRepository
-import com.kudelich.bsu.entities.database.Class
+import com.kudelich.bsu.classes.entities.Class
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

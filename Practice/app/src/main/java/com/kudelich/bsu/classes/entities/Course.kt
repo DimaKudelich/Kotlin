@@ -1,4 +1,4 @@
-package com.kudelich.bsu.entities.database
+package com.kudelich.bsu.classes.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

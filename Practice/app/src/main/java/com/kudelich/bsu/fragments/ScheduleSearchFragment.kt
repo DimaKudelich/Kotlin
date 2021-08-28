@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kudelich.bsu.R
 import com.kudelich.bsu.adapters.SearchAdapter
+import com.kudelich.bsu.classes.Converters
 import com.kudelich.bsu.data.viewmodel.FacultyViewModel
 
 class ScheduleSearchFragment : Fragment() {
@@ -21,16 +22,15 @@ class ScheduleSearchFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_schedule_search, container, false)
-    }
+        val view = inflater.inflate(R.layout.fragment_schedule_search, container, false)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
         mFacultyViewModel = ViewModelProvider(this).get(FacultyViewModel::class.java)
         mFacultyViewModel.readAllData.observe(viewLifecycleOwner, Observer { faculty->
-            adapter.setData(faculty)
+            adapter.setData(Converters().toStringList(faculty))
         })
+
         init()
+        return view
     }
 
     private fun init() {
